@@ -3,12 +3,12 @@ import requests
 
 url_ordenes = "http://localhost:8000/ordenes"
 
- 
+
 headers = {"Content-Type": "application/json"}
 
 # 1. 
 response = requests.post(url_ordenes + "/fisicas", headers=headers)
-print("1. Crear orden de compra física:", response.text)
+print("1. Crear orden de compra fisica:", response.text)
 
 # 2. 
 data_digital = {"codigo_descarga": "ABC123", "fecha_expiracion": "2022-12-31"}
@@ -34,4 +34,4 @@ print("6. Eliminar orden de compra:", response.text)
 
 # 7. 
 response = requests.post(url_ordenes + "/licuadora-refrigeradora-lavadora", headers=headers)
-print("7. Crear orden de compra física personalizada:", response.text)
+print("7. Crear orden de compra fisica personalizada:", response.text)
